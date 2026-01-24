@@ -3,6 +3,7 @@
 module Api
   module V1
     class AuthController < ApplicationController
+      before_action :authenticate_user!, only: [:me, :destroy]
       
       def strava_callback
         strava_client = StravaClient.new
@@ -43,10 +44,10 @@ module Api
           user: UserSerializer.new(current_user).serializable_hash[:data][:attributes] 
         }
       end
-    end
 
-    def destroy
-      render json: { message: 'Logged out successfully' }
+      def destroy
+        render json: { message: 'Logged out successfully' }
+      end
     end
   end
 end

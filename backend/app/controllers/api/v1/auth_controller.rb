@@ -44,5 +44,9 @@ module Api
         }
       end
     end
+
+    def destroy
+      render json: { message: 'Logged out successfully' }
+    end
   end
 end

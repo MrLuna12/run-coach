@@ -6,7 +6,7 @@ class StravaClient
     @client_id = ENV['STRAVA_CLIENT_ID']
     @client_secret = ENV['STRAVA_CLIENT_SECRET']
     
-    @conn = Faraday.new(url: base_url) do |f|
+    @conn = Faraday.new(url: @base_url) do |f|
       f.request :json
       f.response :json
       f.adapter Faraday.default_adapter

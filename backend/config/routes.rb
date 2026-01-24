@@ -7,4 +7,12 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  # 
+  namespace :api do
+    namespace :v1 do
+      post 'auth/strava', to: 'auth#strava_callback'
+      get 'auth/me', to: 'auth#me'
+      delete 'auth/logout', to: 'auth#destroy'
+    end
+  end
 end

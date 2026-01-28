@@ -1,12 +1,7 @@
-import './App.css'
+import { AuthPage } from "@/pages/AuthPage"
 
 function App() {
-
-  return (
-    <>
-    App file
-    </>
-  )
+  return <AuthPage />
 }
 
 export default App

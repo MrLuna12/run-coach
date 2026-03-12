@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title data-inertia>Run Coach</title>
+    <%= inertia_ssr_head %>
+    <%= csrf_meta_tags %>
+    <%= vite_react_refresh_tag %>
+    <%= vite_javascript_tag "inertia.jsx" %>
+  </head>
+  <body>
+    <%= yield %>
+  </body>
+</html>

@@ -96,6 +96,7 @@ GEM
       dotenv (= 3.2.0)
       railties (>= 6.1)
     drb (2.2.3)
+    dry-cli (1.4.1)
     ed25519 (1.4.0)
     erb (6.0.1)
     erubi (1.13.1)
@@ -114,6 +115,8 @@ GEM
       activesupport (>= 6.1)
     i18n (1.14.8)
       concurrent-ruby (~> 1.0)
+    inertia_rails (3.17.0)
+      railties (>= 6)
     io-console (0.8.2)
     irb (1.16.0)
       pp (>= 0.6.0)
@@ -152,6 +155,7 @@ GEM
     minitest (6.0.1)
       prism (~> 1.5)
     msgpack (1.8.0)
+    mutex_m (0.3.0)
     net-http (0.9.1)
       uri (>= 0.11.1)
     net-imap (0.6.2)
@@ -212,6 +216,8 @@ GEM
     rack-cors (3.0.0)
       logger
       rack (>= 3.0.14)
+    rack-proxy (0.7.7)
+      rack
     rack-session (2.1.1)
       base64 (>= 0.1.0)
       rack (>= 3.0.0)
@@ -327,6 +333,15 @@ GEM
     unicode-emoji (4.2.0)
     uri (1.1.1)
     useragent (0.16.11)
+    vite_rails (3.0.20)
+      railties (>= 5.1, < 9)
+      vite_ruby (~> 3.0, >= 3.2.2)
+    vite_ruby (3.9.3)
+      dry-cli (>= 0.7, < 2)
+      logger (~> 1.6)
+      mutex_m
+      rack-proxy (~> 0.6, >= 0.6.1)
+      zeitwerk (~> 2.2)
     websocket-driver (0.8.0)
       base64
       websocket-extensions (>= 0.1.0)
@@ -351,6 +366,7 @@ DEPENDENCIES
   debug
   dotenv-rails
   faraday
+  inertia_rails (~> 3.17)
   jsonapi-serializer
   jwt
   kamal
@@ -364,6 +380,7 @@ DEPENDENCIES
   solid_queue
   thruster
   tzinfo-data
+  vite_rails (~> 3.0)
 
 BUNDLED WITH
    2.5.9
